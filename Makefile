@@ -100,7 +100,7 @@ setup-env:
 
 setup-db:
 			${DJ} migrate --noinput
-			${DJ} createsuperuser --noinput
+			#${DJ} createsuperuser --noinput
 
 check-python:
 			@${PYTHON} -V | grep 3.10 || \

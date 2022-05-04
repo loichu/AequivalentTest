@@ -9,6 +9,8 @@ python = "^3.10"
 Django = "^4.0.3"
 djangorestframework = "^3.13.1"
 psycopg2 = "^2.9.3"
+django-phonenumber-field = "^6.1.0"
+phonenumbers = "^8.12.47"
 
 [tool.poetry.dev-dependencies]
 

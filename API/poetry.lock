@@ -54,6 +54,26 @@ django = ">=2.2"
 pytz = "*"
 
 [[package]]
+name = "djangorestframework-simplejwt"
+version = "5.1.0"
+description = "A minimal JSON Web Token authentication plugin for Django REST Framework"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+django = "*"
+djangorestframework = "*"
+pyjwt = ">=1.7.1,<3"
+
+[package.extras]
+dev = ["pytest-watch", "wheel", "twine", "ipython", "cryptography", "pytest-cov", "pytest-django", "pytest-xdist", "pytest", "tox", "flake8", "pep8", "isort", "Sphinx (>=1.6.5,<2)", "sphinx-rtd-theme (>=0.1.9)", "python-jose (==3.3.0)"]
+doc = ["Sphinx (>=1.6.5,<2)", "sphinx-rtd-theme (>=0.1.9)"]
+lint = ["flake8", "pep8", "isort"]
+python-jose = ["python-jose (==3.3.0)"]
+test = ["cryptography", "pytest-cov", "pytest-django", "pytest-xdist", "pytest", "tox"]
+
+[[package]]
 name = "phonenumbers"
 version = "8.12.47"
 description = "Python version of Google's common library for parsing, formatting, storing and validating international phone numbers."
@@ -68,6 +88,20 @@ description = "psycopg2 - Python-PostgreSQL Database Adapter"
 category = "main"
 optional = false
 python-versions = ">=3.6"
+
+[[package]]
+name = "pyjwt"
+version = "2.3.0"
+description = "JSON Web Token implementation in Python"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+crypto = ["cryptography (>=3.3.1)"]
+dev = ["sphinx", "sphinx-rtd-theme", "zope.interface", "cryptography (>=3.3.1)", "pytest (>=6.0.0,<7.0.0)", "coverage[toml] (==5.0.4)", "mypy", "pre-commit"]
+docs = ["sphinx", "sphinx-rtd-theme", "zope.interface"]
+tests = ["pytest (>=6.0.0,<7.0.0)", "coverage[toml] (==5.0.4)"]
 
 [[package]]
 name = "pytz"
@@ -96,7 +130,7 @@ python-versions = ">=2"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "f721e9606bff5237ab04f5a2a9e76ab14b638ff335fb8573a8def382cb7cfb1f"
+content-hash = "ced072e228097f880cb9c1484de1071d402e3e96bd26ee43e114db63753bd928"
 
 [metadata.files]
 asgiref = [
@@ -115,6 +149,10 @@ djangorestframework = [
     {file = "djangorestframework-3.13.1-py3-none-any.whl", hash = "sha256:24c4bf58ed7e85d1fe4ba250ab2da926d263cd57d64b03e8dcef0ac683f8b1aa"},
     {file = "djangorestframework-3.13.1.tar.gz", hash = "sha256:0c33407ce23acc68eca2a6e46424b008c9c02eceb8cf18581921d0092bc1f2ee"},
 ]
+djangorestframework-simplejwt = [
+    {file = "djangorestframework_simplejwt-5.1.0-py3-none-any.whl", hash = "sha256:cd3ee3aabdc98de104957c136e74ba2a16571b151c88ecd97421fce171a03ea4"},
+    {file = "djangorestframework_simplejwt-5.1.0.tar.gz", hash = "sha256:75323528a7b910843b879194746f0ebc3481c4ad9f354de2dd162160662fb95a"},
+]
 phonenumbers = [
     {file = "phonenumbers-8.12.47-py2.py3-none-any.whl", hash = "sha256:065fc5930ceff3147f50beb4c6d253c25ab0a467ac461174c62696c119593f7e"},
     {file = "phonenumbers-8.12.47.tar.gz", hash = "sha256:56fd605d2f5460e1df2117085b653bb38322295ec658e6acaafc9c976867d522"},
@@ -131,6 +169,10 @@ psycopg2 = [
     {file = "psycopg2-2.9.3-cp39-cp39-win32.whl", hash = "sha256:8cf3878353cc04b053822896bc4922b194792df9df2f1ad8da01fb3043602126"},
     {file = "psycopg2-2.9.3-cp39-cp39-win_amd64.whl", hash = "sha256:06f32425949bd5fe8f625c49f17ebb9784e1e4fe928b7cce72edc36fb68e4c0c"},
     {file = "psycopg2-2.9.3.tar.gz", hash = "sha256:8e841d1bf3434da985cc5ef13e6f75c8981ced601fd70cc6bf33351b91562981"},
+]
+pyjwt = [
+    {file = "PyJWT-2.3.0-py3-none-any.whl", hash = "sha256:e0c4bb8d9f0af0c7f5b1ec4c5036309617d03d56932877f2f7a0beeb5318322f"},
+    {file = "PyJWT-2.3.0.tar.gz", hash = "sha256:b888b4d56f06f6dcd777210c334e69c737be74755d3e5e9ee3fe67dc18a0ee41"},
 ]
 pytz = [
     {file = "pytz-2022.1-py2.py3-none-any.whl", hash = "sha256:e68985985296d9a66a881eb3193b0906246245294a881e7c8afe623866ac6a5c"},

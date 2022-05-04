@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets, permissions, authentication
 from django.contrib.auth import get_user_model
+from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -39,15 +40,24 @@ class UserViewSet(viewsets.ModelViewSet):
         pass
 
 
-class AddressView(APIView):
-    """
-    View to check addresses
-    """
-    authentication_classes = [authentication.TokenAuthentication]
-    permission_classes = [permissions.IsAuthenticated]
+@api_view()
+def check_addr(request):
+    return Response({"message": "Hello, world!"})
 
-    def post(self, request, format=None):
-        """
-        Return a list of all users.
-        """
-        return Response('hello world')
+
+@api_view()
+def check_id(request):
+    return Response({"message": "Hello, world!"})
+
+# class AddressView(APIView):
+#     """
+#     View to check addresses
+#     """
+#     authentication_classes = [authentication.TokenAuthentication]
+#     permission_classes = [permissions.IsAuthenticated]
+#
+#     def post(self, request, format=None):
+#         """
+#         Return a list of all users.
+#         """
+#         return Response('hello world')
